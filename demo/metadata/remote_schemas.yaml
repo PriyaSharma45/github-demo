@@ -1,5 +1,5 @@
 - name: my-remote-schema
   definition:
-    url: https://3bf6-2405-201-d023-304a-e9df-6ab7-89dc-7d2b.ngrok.io
+    url: https://graphql-pokemon.now.sh/
     timeout_seconds: 60
     forward_client_headers: true
