@@ -1,1 +1,1 @@
-Test github integration and hasura preview app.
+Test github integration and Hasura preview app.
