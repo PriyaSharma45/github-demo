@@ -1,2 +1,2 @@
-Test GitHub integration.
+Test GitHub Integration.
 
