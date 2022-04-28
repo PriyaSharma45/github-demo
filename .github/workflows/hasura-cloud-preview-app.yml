@@ -17,7 +17,7 @@ jobs:
           region: us-west-1
           tier: cloud_free
           hasuraEnv: |
-            HASURA_DB_URL=postgres://oikzcelorthfmb:c9a4b3940388cca21de2023232e5216e9dd736acbc4c0c9941d1e632b8af1831@ec2-52-73-29-239.compute-1.amazonaws.com:5432/d8qfbh62jficiv
+            HASURA_DB_URL=postgres://tynzjehumqxueb:95463c0df8e7ec2327c729069f77b017a7a050f1e0b3f3e4be42808c8aa28a94@ec2-52-86-56-90.compute-1.amazonaws.com:5432/d745osa7m5mj2t
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           HASURA_CLOUD_ACCESS_TOKEN: ${{secrets.HASURA_CLOUD_ACCESS_TOKEN}}
