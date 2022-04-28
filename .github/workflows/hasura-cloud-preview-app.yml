@@ -4,25 +4,23 @@ on: # rebuild any PRs and main branch changes
   push:
     branches:
       - main
-
 jobs:
   hasura-cloud-preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      - name: Hasura Cloud Preview Apps
-        uses: hasura/hasura-cloud-preview-apps@v0.1.4
-        id: hasura_cloud_preview
+      - uses: hasura/hasura-cloud-preview-apps@v0.1.5
         with:
-          name: "github-demo-${{github.env.GITHUB_HEAD_REF}}${{github.event.number}}"
-          hasuraProjectDirectoryPath: demo
+          name: "preview-github-demo-${{github.env.GITHUB_HEAD_REF}}${{github.event.number}}"
+          
+          hasuraProjectDirectoryPath: /demo
+          region: us-west-1
+          tier: cloud_free
           hasuraEnv: |
-            HASURA_DB_URL=postgres://tfsqemzpqmscfg:34c435c98faf86e0ad7ea3462158ca25486fbe1dec1a785fa5ced193eedccf03@ec2-44-198-214-172.compute-1.amazonaws.com:5432/d5v3n8jtqp7ore
+            HASURA_DB_URL=postgres://oikzcelorthfmb:c9a4b3940388cca21de2023232e5216e9dd736acbc4c0c9941d1e632b8af1831@ec2-52-73-29-239.compute-1.amazonaws.com:5432/d8qfbh62jficiv
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           HASURA_CLOUD_ACCESS_TOKEN: ${{secrets.HASURA_CLOUD_ACCESS_TOKEN}}
-
       - uses: hasura/comment-progress@v2.1.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
