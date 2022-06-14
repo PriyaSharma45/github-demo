@@ -1,1 +1,5 @@
-[]
+- name: my-remote-schema
+  definition:
+    url: https://graphql-pokemon.now.sh/
+    timeout_seconds: 60
+    forward_client_headers: true
